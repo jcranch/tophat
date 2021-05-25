@@ -28,7 +28,6 @@ library:
   - -Wincomplete-record-updates
   - -Wincomplete-uni-patterns
   - -Wredundant-constraints
-  - -Werror
   - -O2
 
 executables:

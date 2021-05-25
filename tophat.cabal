@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cd1b1020c046a53d34cd24ae6295583bf200575d336650b780f709b3e825082e
+-- hash: 39a1aa2e838b27d3b5f7a4e1322f333cd0271cf7a929b0ba9f71673877a84768
 
 name:           tophat
 version:        1.0.0.0
@@ -31,7 +31,7 @@ library
       Paths_tophat
   hs-source-dirs:
       src
-  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Werror -O2
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -O2
   build-depends:
       base >=4.7 && <5
     , profunctors
