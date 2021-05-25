@@ -1,0 +1,116 @@
+name:                tophat
+version:             1.0.0.0
+license:             BSD3
+author:              "James Cranch"
+maintainer:          "j.d.cranch@sheffield.ac.uk"
+copyright:           "2020-21 James Cranch"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+- app-test-bin/*.tpt.txt
+
+synopsis:            Template-to-Haskell preprocessor, and templating language
+category:            Web
+description:         Please see README.md
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+  - profunctors
+  - text
+  ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -Werror
+  - -O2
+
+executables:
+  tophat:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -Wall
+    - -Wcompat
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wredundant-constraints
+    - -Werror
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - filepath
+    - tophat
+    - text
+
+tests:
+
+  src-test:
+    main:                Spec.hs
+    source-dirs:
+    - src-test
+    - src
+    ghc-options:
+    - -Wall
+    - -Wcompat
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wredundant-constraints
+    - -Werror
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tophat
+    - profunctors
+    - hspec
+    - text
+
+  app-test-src:
+    main:                Spec.hs
+    source-dirs:
+    - app-test-src
+    - app
+    ghc-options:
+    - -Wall
+    - -Wcompat
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wredundant-constraints
+    - -Werror
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tophat
+    - hspec
+    - text
+
+  app-test-bin:
+    main:                Spec.hs
+    source-dirs:         app-test-bin
+    ghc-options:
+    - -Wall
+    - -Wcompat
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wredundant-constraints
+    - -Werror
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - tophat
+    - text
+    - hspec

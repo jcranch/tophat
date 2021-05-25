@@ -1,0 +1,19 @@
+{{for (\ l -> zip (map fst l) (tail $ inits l))\}}
+On the $embed fst$ day of Christmas my true love sent to me:
+{{for (reverse . snd) \}}
+- {{embed id}}
+{{endfor}}
+{{endfor}}
+
+[("first",    "a partridge in a pear tree"),
+ ("second",   "two turtle doves"),
+ ("third",    "three French hens"),
+ ("fourth",   "four calling birds"),
+ ("fifth",    "five gold rings"),
+ ("sixth",    "six geese a-laying"),
+ ("seventh",  "seven swans a-swimming"),
+ ("eighth",   "eight maids a-milking"),
+ ("ninth",    "nine ladies dancing"),
+ ("tenth",    "ten lords a-leaping"),
+ ("eleventh", "eleven pipers piping"),
+ ("twelfth",  "twelve drummers drumming")]

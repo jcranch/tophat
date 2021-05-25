@@ -1,0 +1,11 @@
+$forH (\ n -> reverse [0..n])$
+  $forH (replicate 3)$
+    Alice the camel has $embedShow id$ humps,
+  $endfor$
+  $ifH (> 0)$
+    So go, Alice, go!
+  $endif$
+  $ifH (== 0)$
+    Because Alice is a horse.
+  $endif$
+$endfor$
