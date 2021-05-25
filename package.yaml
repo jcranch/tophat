@@ -40,7 +40,6 @@ executables:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -Werror
     - -O2
     - -threaded
     - -rtsopts
@@ -63,7 +62,6 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -Werror
     - -O2
     - -threaded
     - -rtsopts
@@ -85,7 +83,6 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -Werror
     - -O2
     - -threaded
     - -rtsopts
@@ -104,7 +101,6 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -Werror
     - -O2
     - -threaded
     - -rtsopts
