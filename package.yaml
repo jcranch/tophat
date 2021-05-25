@@ -1,6 +1,6 @@
 name:                tophat
 version:             1.0.0.0
-license:             BSD3
+license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
 copyright:           "2020-21 James Cranch"
@@ -15,20 +15,19 @@ category:            Web
 description:         Please see README.md
 
 dependencies:
-- base >= 4.7 && < 5
+- base               >= 4.7 && < 5
 
 library:
   source-dirs: src
   dependencies:
-  - profunctors
-  - text
+  - profunctors      >= 5.5.2 && < 5.6
+  - text             >= 1.2.3 && < 1.3
   ghc-options:
   - -Wall
   - -Wcompat
   - -Wincomplete-record-updates
   - -Wincomplete-uni-patterns
   - -Wredundant-constraints
-  - -O2
 
 executables:
   tophat:
@@ -40,12 +39,11 @@ executables:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -O2
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - filepath
+    - filepath           >= 1.4.2 && < 1.5
     - tophat
     - text
 
@@ -62,14 +60,13 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -O2
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - tophat
     - profunctors
-    - hspec
+    - hspec              >= 2.7.8 && < 2.8
     - text
 
   app-test-src:
@@ -83,7 +80,6 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -O2
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
@@ -101,7 +97,6 @@ tests:
     - -Wincomplete-record-updates
     - -Wincomplete-uni-patterns
     - -Wredundant-constraints
-    - -O2
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
