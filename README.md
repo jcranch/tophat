@@ -2,19 +2,21 @@
 
 Tophat is a template engine for Haskell. It has two components:
 
-- a preprocessor for Haskell code which embeds templates directly
-  into it, and
-  **link**
+- a preprocessor for Haskell code
+  ([source](https://github.com/jcranch/tophat/tree/main/app))
+  which embeds templates directly into it, and
 
-- a small, fairly self-contained library of template combinators,
-  intended for use with it containing all the usual imperative control
-  structures (`if`, `for`, and so on).
-  **link**
+- a small, fairly self-contained library
+  ([webpage](https://hackage.haskell.org/package/tophat),
+   [source](https://github.com/jcranch/tophat/tree/main/src))
+  of template combinators, intended for use with it containing all the
+  usual imperative control structures (`if`, `for`, and so on).
 
 ## An example
 
 Here's a short example. The Haskell source code is as follows (in the
-`examples` directory of the repository):
+[examples](https://github.com/jcranch/tophat/tree/main/examples)
+directory of the repository):
 
     {-# LANGUAGE OverloadedStrings #-}
 
@@ -46,12 +48,12 @@ Meanwhile, in the file `alicethecamel.tpt.txt`, we put the following:
     $endfor$
 
 This outputs a version of a
-[https://allnurseryrhymes.com/alice-the-camel/](classic nursery
-rhyme).  The spacing is idiosyncratic: the template above was
-formatted to make it easy to read. If we were writing HTML or another
-language where whitespace is insignificant, it would be fine, but the
-proper formatting of nursery rhymes is important. Adjusting the
-spacing makes it more correct but less pleasant.
+[classic nursery rhyme](https://allnurseryrhymes.com/alice-the-camel/).
+The spacing is idiosyncratic: the template above was formatted to make
+it easy to read. If we were writing HTML or another language where
+whitespace is insignificant, it would be fine, but the proper
+formatting of nursery rhymes is important. Adjusting the spacing makes
+it more correct but less pleasant.
 
     $forH (\ n -> reverse [0..n]) >>> forH (replicate 3)$
     Alice the camel has $embedShow id$ humps,$endfor$

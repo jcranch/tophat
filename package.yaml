@@ -4,6 +4,7 @@ license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
 copyright:           "2020-21 James Cranch"
+homepage:            "https://github.com/jcranch/tophat"
 
 extra-source-files:
 - README.md
