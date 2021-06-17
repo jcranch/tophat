@@ -80,9 +80,11 @@ newlines, for ourselves, by adding a postprocessor:
 This replacement of whitespace is useful enough that we've placed it
 in `Tophat.Text`.
 
-## Advantages and disadvantages
+## Comparisons with other templating engines
 
-### Interoperability
+### Advantages
+
+#### Interoperability
 
 The code in Tophat templates is just Haskell, and so can be mixed
 freely with the other code in the project.
@@ -92,7 +94,7 @@ it is certainly pleasant to be able to do straightforward computations
 in templates, and for those calculations to have exactly the same
 syntax as if they were done elsewhere.
 
-### Power and extensibility
+#### Power and extensibility
 
 Relatedly, the power of Haskell means that the control structures
 provided are unusually powerful. For example, the "for" command works
@@ -101,27 +103,27 @@ over any instance of the Foldable typeclass.
 However, the framework is fairly simple, and it is easy to define new
 control structures if desired.
 
-### Flexibility
+#### Flexibility
 
 Any type which is an instance of `IsString` (from `Data.String`) can be
 used: Tophat templates can generate any of the main string types, or
 more exotic ones, with equal ease.
 
-## Disadvantages
+### Disadvantages
 
-### Novelty
+#### Novelty
 
 Since other template languages are not Haskell, templates written for
 other engines will need some converting to work with Tophat.
 
-### New syntax
+#### New syntax
 
 Since the templates are used directly from Haskell source code, the
 `{{` and `}}` brackets which introduce a template are new syntax. This
 may mess up editor syntax highlighting, hlint, and other tools which
 depend on analysing the lexical structure of Haskell source code.
 
-## Benchmarking
+### Benchmarking
 
 I don't have any good data.
 
