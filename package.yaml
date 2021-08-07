@@ -67,7 +67,7 @@ tests:
     dependencies:
     - tophat
     - profunctors
-    - hspec              >= 2.5.5 && < 2.8
+    - hspec              >= 2.5.5 && < 2.9
     - text
 
   app-test-src:
