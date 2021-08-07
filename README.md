@@ -172,3 +172,10 @@ for declaring dependent files.
 
 It stands for "thunks of pure Haskell as templates", but let's not
 worry about that.
+
+## Running the tests
+
+If you want to run the tests using stack, then note that these require
+the preprocessor to have already been built. Hence `stack build`
+followed by `stack test` should work, but `stack test` on its own in a
+fresh download probably won't.
