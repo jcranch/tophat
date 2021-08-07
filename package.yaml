@@ -1,5 +1,5 @@
 name:                tophat
-version:             1.0.3.0
+version:             1.0.4.0
 license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
@@ -101,6 +101,8 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    build-tools:
+    - tophat:tophat
     dependencies:
     - tophat
     - text

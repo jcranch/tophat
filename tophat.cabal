@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0498827516eeaefe49e5c4d552707219d69ef5131f4813b463d0e5fcaaf895db
+-- hash: 9d7240597ed9fd51a1ecce6b788df3415258b8aa8ba171331962ae3d0946403d
 
 name:           tophat
 version:        1.0.3.0
@@ -67,6 +67,8 @@ test-suite app-test-bin
   hs-source-dirs:
       app-test-bin
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-tools:
+      tophat
   build-depends:
       base >=4.7 && <5
     , hspec
