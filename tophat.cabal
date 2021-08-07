@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7af5636141de4f4e166e73fd4ddcde2a5e1970cc189d1f41f4ced7eeb543e0d4
+-- hash: 135a5df0356465cc1eee4c5fbd5001a6468de315bf8fe498540f6e68c82e502c
 
 name:           tophat
-version:        1.0.1.0
+version:        1.0.2.0
 synopsis:       Template-to-Haskell preprocessor, and templating language
 description:    Please see README.md
 category:       Web
