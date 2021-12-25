@@ -1,5 +1,9 @@
 # Changelog for Tophat
 
+## Changes in 1.0.5.1
+
+- Generalising bounds to allow text-2
+
 ## Changes in 1.0.5.0
 
 - Maintenance of bounds.
