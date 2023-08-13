@@ -1,9 +1,9 @@
 name:                tophat
-version:             1.0.5.1
+version:             1.0.6.0
 license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
-copyright:           "2020-21 James Cranch"
+copyright:           "2020-23 James Cranch"
 homepage:            "https://github.com/jcranch/tophat"
 
 extra-source-files:

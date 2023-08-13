@@ -1,11 +1,18 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE
+      CPP,
+      OverloadedStrings
+  #-}
 
 -- | We provide two global monads: one merely storing errors, and one
 -- also incorporating IO.
 
 module Report where
 
+-- liftA2 is in Prelude from GHC9.6 onwards
+#if MIN_VERSION_GLASGOW_HASKELL(9,6,0,0)
+#else
 import Control.Applicative (liftA2)
+#endif
 import Control.Monad (join, (<=<))
 import Data.List (foldl')
 import Data.Text.Lazy (Text, intercalate, unpack)

@@ -1,15 +1,23 @@
-{-# LANGUAGE OverloadedStrings, StrictData #-}
+{-# LANGUAGE
+      CPP,
+      OverloadedStrings,
+      StrictData
+  #-}
 
 -- | Intended to be used as a Haskell preprocessor, so call it with
 -- options including:
 --
 -- > ghc -F -pgmF tophat -optF <any extra options>
 --
--- This process is documented <https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/phases.html#ghc-flag--F by GHC>.
+-- This process is documented [by GHC](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/phases.html#ghc-flag--F).
 
 module Main where
 
+-- liftA2 is in Prelude from GHC9.6 onwards
+#if MIN_VERSION_GLASGOW_HASKELL(9,6,0,0)
+#else
 import Control.Applicative (liftA2)
+#endif
 import Control.Monad ((<=<))
 import Data.Char (isSpace)
 import qualified Data.List as L
@@ -56,19 +64,19 @@ usageNote :: String -> Text
 usageNote prog =
   "Usage: " <>
   T.pack prog <>
-  " <original> <input> <output> <other args> \
-  \See https://hackage.haskell.org/tophat/ \
-  \\
-  \Arguments:\
-  \  templates=<dir>   set template directory\
-  \  opener=<delim>    set opening delimiter\
-  \  closer=<delim>    set closing delimiter\
-  \  start-code        start templates in code\
-  \  start-literal     start templates in literal text\
-  \  end-code          check that templates end in code\
-  \  end-literal       check that templates end in literals\
-  \  end-either        allow templates to end in code or literals\
-  \  check-balance     check that code fragments have balanced parentheses"
+  T.unlines [" <original> <input> <output> <other args>",
+             "See https://hackage.haskell.org/tophat/",
+             "",
+             "Arguments:",
+             "  templates=<dir>   set template directory",
+             "  opener=<delim>    set opening delimiter",
+             "  closer=<delim>    set closing delimiter",
+             "  start-code        start templates in code",
+             "  start-literal     start templates in literal text",
+             "  end-code          check that templates end in code",
+             "  end-literal       check that templates end in literals",
+             "  end-either        allow templates to end in code or literals",
+             "  check-balance     check that code fragments have balanced parentheses"]
 
 
 makeArgs :: String -> [String] -> E Arguments
