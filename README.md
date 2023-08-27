@@ -141,7 +141,7 @@ alternatives:
 
 - [Shakespeare](http://hackage.haskell.org/package/shakespeare), as used in Yesod
 
-- [Heterocephalus](https://hackage.haskell.org/package/heterocephalus), which uses template Haskell
+- [Heterocephalus](https://hackage.haskell.org/package/heterocephalus), which uses Template Haskell
 
 ## Forcing recompilation
 
