@@ -1,13 +1,13 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e5583a59f6e7869005a1f79c7a652b8c837f95be8de70cf36e654e7f9977db9c
+-- hash: 7e33da5ab8c5e10c8dcf0e9b23c09bb49579234ab46f5c194ab0208054a95f7c
 
 name:           tophat
-version:        1.0.5.1
+version:        1.0.6.0
 synopsis:       Template-to-Haskell preprocessor, and templating language
 description:    Please see README.md
 category:       Web
@@ -52,7 +52,7 @@ executable tophat
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , filepath >=1.4.2 && <1.5
+    , filepath >=1.4.2 && <1.6
     , text
     , tophat
   default-language: Haskell2010

@@ -1,5 +1,5 @@
 name:                tophat
-version:             1.0.5.1
+version:             1.0.6.0
 license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
@@ -44,7 +44,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - filepath           >= 1.4.2 && < 1.5
+    - filepath           >= 1.4.2 && < 1.6
     - tophat
     - text
 
