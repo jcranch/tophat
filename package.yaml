@@ -1,5 +1,5 @@
 name:                tophat
-version:             1.0.6.1
+version:             1.0.7.0
 license:             GPL-3
 author:              "James Cranch"
 maintainer:          "j.d.cranch@sheffield.ac.uk"
@@ -8,7 +8,7 @@ homepage:            "https://github.com/jcranch/tophat"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
+- CHANGELOG.md
 - app-test-bin/*.tpt.txt
 
 synopsis:            Template-to-Haskell preprocessor, and templating language
@@ -44,7 +44,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - filepath           >= 1.4.2 && < 1.5
+    - filepath           >= 1.4.2 && < 1.6
     - tophat
     - text
 
@@ -101,7 +101,7 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    build-tools:
+    build-tool-depends:
     - tophat:tophat
     dependencies:
     - tophat

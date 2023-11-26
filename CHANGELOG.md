@@ -1,5 +1,10 @@
 # Changelog for Tophat
 
+## Changes in 1.0.7.0
+
+- Bounds bump
+- Better `package.yaml`/`.cabal` file
+
 ## Changes in 1.0.5.1
 
 - Generalising bounds to allow text-2
