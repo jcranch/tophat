@@ -5,14 +5,14 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           tophat
-version:        1.0.7.0
+version:        1.0.8.0
 synopsis:       Template-to-Haskell preprocessor, and templating language
 description:    Please see README.md
 category:       Web
 homepage:       https://github.com/jcranch/tophat
 author:         James Cranch
 maintainer:     j.d.cranch@sheffield.ac.uk
-copyright:      2020-23 James Cranch
+copyright:      2020-24 James Cranch
 license:        GPL-3
 license-file:   LICENSE
 build-type:     Simple

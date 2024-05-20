@@ -14,7 +14,10 @@ module Report where
 import Control.Applicative (liftA2)
 #endif
 import Control.Monad (join, (<=<))
+#if MIN_VERSION_GLASGOW_HASKELL(9,10,0,0)
+#else
 import Data.List (foldl')
+#endif
 import Data.Text.Lazy (Text, intercalate, unpack)
 import System.Exit (die)
 
