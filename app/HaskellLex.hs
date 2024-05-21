@@ -1,4 +1,7 @@
-{-# LANGUAGE OverloadedStrings, StrictData #-}
+{-# LANGUAGE
+      OverloadedStrings,
+      StrictData
+  #-}
 
 module HaskellLex where
 

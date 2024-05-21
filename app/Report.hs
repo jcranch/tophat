@@ -1,5 +1,4 @@
 {-# LANGUAGE
-      CPP,
       OverloadedStrings
   #-}
 
@@ -8,16 +7,10 @@
 
 module Report where
 
--- liftA2 is in Prelude from GHC9.6 onwards
-#if MIN_VERSION_GLASGOW_HASKELL(9,6,0,0)
-#else
-import Control.Applicative (liftA2)
-#endif
+import Prelude hiding (Applicative(..), Foldable(..))
+import Control.Applicative (Applicative(..))
 import Control.Monad (join, (<=<))
-#if MIN_VERSION_GLASGOW_HASKELL(9,10,0,0)
-#else
-import Data.List (foldl')
-#endif
+import Data.Foldable (Foldable(..))
 import Data.Text.Lazy (Text, intercalate, unpack)
 import System.Exit (die)
 
