@@ -1,4 +1,5 @@
-{-# LANGUAGE OverloadedStrings, StrictData #-}
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE StrictData #-}
 
 module Include where
 

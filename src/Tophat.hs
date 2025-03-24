@@ -1,6 +1,6 @@
-{-# LANGUAGE FlexibleInstances,
-             FunctionalDependencies,
-             GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE FunctionalDependencies #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
 -- | A library providing support for templating
 module Tophat
